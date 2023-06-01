@@ -1,0 +1,163 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=7284, tid=0x00000000000060e8
+#
+# JRE version:  (8.0_312-b07) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.312-b07 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000019315f52000):  JavaThread "Unknown thread" [_thread_in_vm, id=24808, stack(0x00000038de500000,0x00000038de600000)]
+
+Stack: [0x00000038de500000,0x00000038de600000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000019315f52000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=24808, stack(0x00000038de500000,0x00000038de600000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000006c2a00000, size: 4054 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 75776K, used 1300K [0x000000076b900000, 0x0000000770d80000, 0x00000007c0000000)
+  eden space 65024K, 2% used [0x000000076b900000,0x000000076ba451f8,0x000000076f880000)
+  from space 10752K, 0% used [0x0000000770300000,0x0000000770300000,0x0000000770d80000)
+  to   space 10752K, 0% used [0x000000076f880000,0x000000076f880000,0x0000000770300000)
+ ParOldGen       total 173568K, used 0K [0x00000006c2a00000, 0x00000006cd380000, 0x000000076b900000)
+  object space 173568K, 0% used [0x00000006c2a00000,0x00000006c2a00000,0x00000006cd380000)
+ Metaspace       used 781K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 76K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000019326f50000,0x0000019327740000] byte_map_base: 0x000001932393b000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005b8f1860
+ Begin Bits: [0x0000019327c90000, 0x000001932bbe8000)
+ End Bits:   [0x000001932bbe8000, 0x000001932fb40000)
+
+Polling page: 0x0000019317b60000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000019317b90000, 0x0000019317e00000, 0x0000019326b90000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.070 loading class java/lang/Short
+Event: 0.070 loading class java/lang/Short done
+Event: 0.070 loading class java/lang/Integer
+Event: 0.071 loading class java/lang/Integer done
+Event: 0.071 loading class java/lang/Long
+Event: 0.071 loading class java/lang/Long done
+Event: 0.074 loading class java/lang/NullPointerException
+Event: 0.074 loading class java/lang/NullPointerException done
+Event: 0.074 loading class java/lang/ArithmeticException
+Event: 0.074 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff64c360000 - 0x00007ff64c39a000 	C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\bin\java.exe
+0x00007fff81d70000 - 0x00007fff81f68000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fff7fe70000 - 0x00007fff7ff2f000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fff7f5e0000 - 0x00007fff7f8d6000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fff7ff30000 - 0x00007fff7ffdf000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fff81840000 - 0x00007fff818de000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fff817a0000 - 0x00007fff8183c000 	C:\WINDOWS\System32\sechost.dll
+0x00007fff80890000 - 0x00007fff809b6000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fff81b30000 - 0x00007fff81ccd000 	C:\WINDOWS\System32\USER32.dll
+0x00007fff7f5b0000 - 0x00007fff7f5d2000 	C:\WINDOWS\System32\win32u.dll
+0x00007fff7fdd0000 - 0x00007fff7fdfc000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fff7faa0000 - 0x00007fff7fbb5000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fff7f990000 - 0x00007fff7fa2d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fff7fc40000 - 0x00007fff7fd40000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff6c310000 - 0x00007fff6c5aa000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007fff80f20000 - 0x00007fff80f50000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fff3eb10000 - 0x00007fff3ebff000 	C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\bin\msvcr120.dll
+0x00007fff3d5c0000 - 0x00007fff3d666000 	C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\bin\msvcp120.dll
+0x000000005b100000 - 0x000000005b970000 	C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\bin\server\jvm.dll
+0x00007fff80d80000 - 0x00007fff80d88000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fff55940000 - 0x00007fff55949000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fff78400000 - 0x00007fff7840a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fff74570000 - 0x00007fff74597000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fff80d90000 - 0x00007fff80dfb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fff7ae90000 - 0x00007fff7ae9f000 	C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\bin\verify.dll
+0x00007fff793d0000 - 0x00007fff793f9000 	C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\bin\java.dll
+0x00007fff5ba40000 - 0x00007fff5ba6a000 	C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\bin\instrument.dll
+0x00007fff79350000 - 0x00007fff79366000 	C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dvisualvm.id=32399178479300 -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:D:\Program Files\JetBrains\IntelliJ IDEA 2021.3.3\lib\idea_rt.jar=57693:D:\Program Files\JetBrains\IntelliJ IDEA 2021.3.3\bin -Dfile.encoding=UTF-8 
+java_command: com.my.ServerSpringBootApplication
+java_class_path (initial): C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\charsets.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\access-bridge-64.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\cldrdata.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\dnsns.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\jaccess.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\jfxrt.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\localedata.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\nashorn.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\sunec.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\sunjce_provider.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\sunmscapi.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\sunpkcs11.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\ext\zipfs.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\jce.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\jfr.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\jfxswt.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\jsse.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\management-agent.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\resources.jar;C:\Users\其然乐衣Letitbe\.jdks\corretto-1.8.0_312\jre\lib\rt.jar;D:\Github\GitProjects\share-project\netty+webSocket+spring boot\nettyServer\target\classes;C:\Users\其然乐衣Letitbe\.m2\repository\org\springframework\spring-context\5.2.3.RELEASE\spring-context-5.2.3.RELEASE.jar;C:\Users\其然乐衣Letitbe\.m2\repository\org\springframework\spring-aop\5.2.3.RELEASE\spring-aop-5.2.3.RELEASE.jar;C:\Users\其然乐衣Letitbe\.m2\repository\org\springframework\spring-beans\5.2.3.RELEASE\spring-beans-5.2.3.RELEASE.jar;C:\Users\其然乐衣Letitbe\.m2\repository\org\springframework\spring
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\Java
+PATH=D:\Program Files (x86)\VMware\VMware Workstation\bin\;D:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR\;C:\Program Files (x86)\Yozosoft\Yozo_Office\Lib\xuggler\bin;D:\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Users\其然乐衣Letitbe\Maven\apache-maven-3.6.0-bin\apache-maven-3.6.0\bin;C:\Program Files\PuTTY\;D:\texlive\texlive\2021\bin\win32;D:\Java\数据库MySQL\mysql-8.0.28-winx64\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;%ERLANG_HOME%\bin;D:\Program Files (x86)\NetSarang\Xftp 7\;D:\Git\cmd;D:\Program Files (x86)\NetSarang\Xshell 7\;D:\nvm;D:\nodejs;"D:\nodejs;D:\nodejs\node_global;";D:\Typora\RunningYuBlog\node_modules\hexo\node_modules\.bin;D:\Typora\RunningYuBlog\node_modules\hexo\node_modules;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\其然乐衣Letitbe\AppData\Local\Microsoft\WindowsApps;D:\Program Files\JetBrains\IntelliJ IDEA 2021.3.1\bin;;D:\altera\13.1\modelsim_ae\win32aloem;D:\altera\13.1\modelsim_ase\win32aloem;D:\nodejs\node_global;D:\nvm;D:\nodejs;D:\APP\Vscode\Microsoft VS Code\bin;D:\nodejs\node_cache;D:\Typora\RunningYuBlog\node_modules\hexo\node_modules\.bin
+USERNAME=其然乐衣Letitbe
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 19041 (10.0.19041.2913)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 12, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16601588k(3165776k free), swap 16601588k(5868k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.312-b07) for windows-amd64 JRE (1.8.0_312-b07), built on Oct 14 2021 21:08:49 by "Administrator" with MS VC++ 12.0 (VS2013)
+
+time: Fri May 19 19:48:50 2023
+timezone: ?D1ú±ê×?ê±??
+elapsed time: 0.087671 seconds (0d 0h 0m 0s)
+

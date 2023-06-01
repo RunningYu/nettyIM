@@ -1,0 +1,21 @@
+#服务器端口
+server:
+  port: 8080
+#  netty服务端口和webSocket path
+netty:
+  port: 8081
+  path: /chat
+
+#静态资源位置和视图解析器
+resources:
+  static-locations:
+    - classpath:/static/
+spring:
+  thymeleaf:
+    cache: false
+    checktemplatelocation: true
+    enabled: true
+    encoding: UTF-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
