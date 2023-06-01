@@ -1,9 +1,9 @@
 #服务器端口
 server:
-  port: 8080
+  port: 8181
 #  netty服务端口和webSocket path
 netty:
-  port: 8081
+  port: 8182
   path: /chat
 
 #静态资源位置和视图解析器

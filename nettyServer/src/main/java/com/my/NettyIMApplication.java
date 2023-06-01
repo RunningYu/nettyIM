@@ -13,10 +13,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date : 2023/5/21
  */
 @SpringBootApplication
-public class ServerSpringBootApplication implements CommandLineRunner {
+public class NettyIMApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServerSpringBootApplication.class,args);
+        SpringApplication.run(NettyIMApplication.class,args);
     }
 
     @Autowired

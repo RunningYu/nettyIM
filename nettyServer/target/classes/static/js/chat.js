@@ -13,8 +13,7 @@ $(function () {
         }
     }
 
-    // var ws = new WebSocket("ws://106.75.144.210:8081/chat");
-    var ws = new WebSocket("ws://127.0.0.1:8081/chat");
+    var ws = new WebSocket("ws://127.0.0.1:8182/chat");
     ws.onopen = function () {
         console.log("连接成功.")
         sendActiveMsg(1);
